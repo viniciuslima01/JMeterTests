@@ -25,7 +25,7 @@ jobs:
     - name: JMeter Test
       uses: QAInsights/PerfAction@v5.6.2
       with:
-        test-plan-path: ./Requisição HTTP.jmx
+        test-plan-path: "./Requisição HTTP.jmx"
         args: "-e -o ./reports/html/"
 
     - name: Upload de Resultados
