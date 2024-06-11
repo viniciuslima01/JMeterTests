@@ -17,12 +17,26 @@ jobs:
         sudo apt-get install -y openjdk-11-jdk wget
         wget https://dlcdn.apache.org/jmeter/binaries/apache-jmeter-5.6.3.tgz
         tar -xzf apache-jmeter-5.6.3.tgz
+    # - name: Executar Testes do JMeter
+    #   run: apache-jmeter-5.6.3/bin/jmeter -n -t "./Requisição HTTP.jmx" -l results.jtl
+    - name: JMeter Test
+      uses: QAInsights/PerfAction@v5.6.2
+      with:
+        test-plan-path: ./Requisição HTTP.jmx
+        args: "-e -o ./reports/html/"
 
-    - name: Executar Testes do JMeter
-      run: apache-jmeter-5.6.3/bin/jmeter -n -t "./Requisição HTTP.jmx" -l results.jtl
-
+    - name: Create reports directory
+      run: mkdir reports
+   
     - name: Upload de Resultados
       uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: results.jtl
+      
+    - name: Upload HTML Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: jmeter-html-reports
+        path: reports
+        if-no-files-found: error
