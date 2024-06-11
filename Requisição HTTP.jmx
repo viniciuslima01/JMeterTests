@@ -33,7 +33,7 @@
         </CSVDataSet>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP">
-          <stringProp name="HTTPSampler.domain">95aa-2804-fc-8d2c-fb00-e439-8c3b-8dc4-ad38.ngrok-free.app </stringProp>
+          <stringProp name="HTTPSampler.domain">95aa-2804-fc-8d2c-fb00-e439-8c3b-8dc4-ad38.ngrok-free.app</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/evento</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -89,7 +89,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">result.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
