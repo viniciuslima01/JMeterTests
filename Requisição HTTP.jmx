@@ -31,7 +31,7 @@
         </CSVDataSet>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP">
-          <stringProp name="HTTPSampler.domain">192.168.100.10</stringProp>
+          <stringProp name="HTTPSampler.domain"> https://1ab5-2804-fc-8d2c-fb00-e439-8c3b-8dc4-ad38.ngrok-free.app</stringProp>
           <stringProp name="HTTPSampler.port">3002</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.path">/evento</stringProp>
