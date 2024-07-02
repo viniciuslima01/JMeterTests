@@ -23,7 +23,7 @@ jobs:
  
     - name: JMeter Test
       run: |
-        ./apache-jmeter-5.6.3/bin/jmeter -n -t "./Requisição HTTP.jmx" -l "./results.jtl" -e -o "./reports/html/"
+        ./apache-jmeter-5.6.3/bin/jmeter -n -t "./Requisicao_HTTP.jmx" -l "./results.jtl" -e -o "./reports/html/"
     
     - name: Upload de Resultados
       uses: actions/upload-artifact@v3
